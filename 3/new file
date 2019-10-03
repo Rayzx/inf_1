@@ -1,0 +1,34 @@
+from graph import *
+
+"""
+penColor(255,0,255)
+penSize(5)
+brushColor("blue")
+rectangle(100, 100, 300, 200)
+brushColor("yellow")
+polygon([(100,100), (200,50),
+         (300,100), (100,100)])
+penColor("white")
+brushColor("green")
+circle(200, 150, 50)
+"""
+k = 4
+windowSize(200*k,300*k)
+canvasSize(200*k,300*k)
+brushColor("black")
+circle(100*k,40*k,30*k)
+circle(100*k,150*k,65*k)
+polygon([(90*k,60*k),(200*k-90*k,60*k),(200*k)(70*k,100*k)])
+
+
+
+
+#polygon([(150,315),(350,315),(350,350),(150,350)])
+#polygon([(70,90),(220,180),(220,200),(70,110)])
+#polygon([(400,90),(400,100),(300,170),(300,110)])
+
+
+
+
+run()
+
