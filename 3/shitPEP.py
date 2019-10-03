@@ -5,7 +5,7 @@ from graph import brushColor, polygon, randColor, \
 
 import math
 
-# GLOBAL VARIABLES
+# GLOBAL VARIABLES fuck pep
 # it's scale koef
 
 k = 4
