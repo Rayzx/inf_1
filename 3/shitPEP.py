@@ -1,5 +1,8 @@
 
-from graph import *
+from graph import brushColor, polygon, randColor, rectangle, changeFillColor, \
+windowSize, canvasSize, onTimer, run, penSize, penColor, line, circle, moveTo, \
+lineTo, deleteObject, moveObjectBy
+
 import math
 
 # GLOBAL VARIABLES
