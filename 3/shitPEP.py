@@ -1,4 +1,3 @@
-#hello
 from graph import brushColor, polygon, randColor, \
                   windowSize, canvasSize, onTimer, run, penSize, penColor, line, circle, moveTo, \
                   lineTo, deleteObject, moveObjectBy
@@ -21,7 +20,7 @@ obj1 = None
 obj2 = None
 
 
-###
+# ##
 
 # background gradient function (R: 0-225, G: 0-225, B: 0-225)
 
@@ -39,7 +38,7 @@ def gradient(R=225, G=0, B=0):
         i += 1
 
 
-###
+# ##
 
 # Spyral (koef:+/- change twist dir, X: X-cord, Y: Y-cord)
 
@@ -56,7 +55,7 @@ def spyral(koef=1, X=100, Y=150):
             penColor(randColor())
 
 
-###
+# ##
 
 # Print some TUX UGLY LEGACY CODE ARHHHHHHHH
 
@@ -102,11 +101,11 @@ def printTUX():
 (100 * k, 77 * k), (80 * k, 70 * k)])
 
 
-###
+# ##
 
-### start main ###
+# ## start main ###
 
-##init
+# #init
 print(123)
 windowSize(200 * k, 300 * k)
 canvasSize(200 * k, 300 * k)
@@ -142,7 +141,7 @@ def update():
     moveObjectBy(obj2, 7 * math.cos(i), 10 * math.sin(i))
 
 
-###
+# ##
 
 deleteObject(obj)
 
