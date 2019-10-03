@@ -49,7 +49,8 @@ def spyral(koef=1, X=100, Y=150):
     j = 0
     while j < 360 * 4 * abs(koef):
         rho = j / 10 * koef / abs(koef)
-        lineTo(100 * k + rho * math.sin(j / 360 * 3.14) + X * k - 100 * k, 150 * k + rho * math.cos(j / 360 * 3.14) + Y * k - 150 * k)
+        lineTo(100 * k + rho * math.sin(j / 360 * 3.14) + X * k - 100 * k, \
+150 * k + rho * math.cos(j / 360 * 3.14) + Y * k - 150 * k)
         j += 1
         if j % 30 == 0:
             penColor(randColor())
@@ -66,7 +67,8 @@ def printTUX():
     global obj2
     circle(100 * k, 50 * k, 30 * k)
     circle(100 * k, 145 * k, 65 * k)
-    polygon([(80 * k, 70 * k), (200 * k - 80 * k, 70 * k), (200 * k- 55 * k, 100 * k), (55 * k, 100 * k)])
+    polygon([(80 * k, 70 * k), (200 * k - 80 * k, 70 * k), \
+(200 * k- 55 * k, 100 * k), (55 * k, 100 * k)])
     brushColor('white')
     circle(100 * k, 145 * k, 57 * k)
     brushColor('yellow')
@@ -93,11 +95,11 @@ def printTUX():
     obj1 = circle(85 * k, 53 * k, 2 * k)
     obj2 = circle(200 * k - 85 * k, 52 * k, 2 * k)
     brushColor(252, 252, 12)
-    polygon([(100 * k, 60 * k), (200 * k - 80 * k, 70 * k), (100 * k,
-            80 * k), (80 * k, 70 * k)])
+    polygon([(100 * k, 60 * k), (200 * k - 80 * k, 70 * k), \
+(100 * k, 80 * k), (80 * k, 70 * k)])
     brushColor(252, 156, 12)
-    polygon([(100 * k, 72 * k), (200 * k - 80 * k, 70 * k), (100 * k,
-            77 * k), (80 * k, 70 * k)])
+    polygon([(100 * k, 72 * k), (200 * k - 80 * k, 70 * k), \
+(100 * k, 77 * k), (80 * k, 70 * k)])
 
 
 ###
@@ -117,7 +119,8 @@ spyral()
 
 # test code
 
-obj = polygon([(50 * k, 50 * k), (150 * k, 50 * k), (150 * k, 150 * k), (50 * k, 150 * k)])
+obj = polygon([(50 * k, 50 * k), (150 * k, 50 * k), \
+(150 * k, 150 * k), (50 * k, 150 * k)])
 
 # changeCoord(obj,[(x,y),(x,y)])
 # Animation
