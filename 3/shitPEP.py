@@ -1,5 +1,5 @@
-
-from graph import brushColor, polygon, randColor, rectangle, changeFillColor, \
+#hello
+from graph import brushColor, polygon, randColor, \
 windowSize, canvasSize, onTimer, run, penSize, penColor, line, circle, moveTo, \
 lineTo, deleteObject, moveObjectBy
 
@@ -117,8 +117,7 @@ spyral()
 
 # test code
 
-obj = polygon([(50 * k, 50 * k), (150 * k, 50 * k), (150 * k, 150 * k),
-              (50 * k, 150 * k)])
+obj = polygon([(50 * k, 50 * k), (150 * k, 50 * k), (150 * k, 150 * k), (50 * k, 150 * k)])
 
 # changeCoord(obj,[(x,y),(x,y)])
 # Animation
