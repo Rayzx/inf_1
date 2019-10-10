@@ -1,0 +1,53 @@
+import tkinter as tk
+import math as math
+import copy
+
+
+root = tk.Tk()
+myCanvas = tk.Canvas( root, width = 1000, height = 1000, bg = 'white')
+
+myCanvas.pack()
+
+def CRotate_polygon(polygon):
+    lCord = myCanvas.coords(polygon)
+    print( "  {0}".format(lCord))
+    n = len(lCord) / 2
+    i = 0
+    xeq = 0
+    yeq = 0
+    while i < n:
+        xeq = xeq + lCord[2*i]
+        yeq = yeq + lCord[2*i+1]
+        i = i + 1
+    xeq = xeq / n
+    yeq = yeq / n
+    i = 0
+    blCord = copy.deepcopy(lCord)
+
+    print( "  {0} {1}".format(blCord[0] - xeq,blCord[1] - yeq ))
+    print( "  {0} {1}".format(blCord[2] - xeq,blCord[3] - yeq ))
+    print( "  {0} {1}".format(blCord[4] - xeq,blCord[5] - yeq ))
+    print( "  {0} {1}".format(blCord[6] - xeq,blCord[7] - yeq ))
+
+    while i < n: 
+        lCord[2*i] = (blCord[2*i] - xeq) * math.cos(3.1415926/4) - (blCord[2*i+1] - yeq) * math.sin(3.1415926/4) + xeq
+        lCord[2*i+1] = (blCord[2*i] - xeq) * math.sin(3.1415926/4) + (blCord[2*i+1] - yeq) * math.cos(3.1415926/4) + yeq
+        i = i + 1
+        
+    print( "  {0} {1}".format(xeq, yeq))
+    myCanvas.coords(polygon, lCord)
+
+def event_click(event):
+    myCanvas.itemconfig( myText, text = "{0}  {1}  ".format( event.x, event.y))
+    CRotate_polygon(mySquare)
+
+
+mySquare = myCanvas.create_polygon( 300, 300, 450, 300, 450, 450, 300, 450)
+mySquare1 = myCanvas.create_polygon( -100, -100, -100, 100, 100, 100, 100, -100)
+
+myText = myCanvas.create_text( 800, 100, text = "hello", font = "arial 40")
+
+
+myCanvas.bind('<Button-1>', event_click)
+
+root.mainloop()
